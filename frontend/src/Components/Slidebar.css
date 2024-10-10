@@ -1,0 +1,99 @@
+/* Sidebar styles */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -300px; /* Hidden off-screen */
+  width: 300px;
+  height: 100%;
+  /* background-color:transparent; */
+  background-color: rgba(0, 0, 0, 1); /* Darker background */
+  color: #ecf0f1; /* Light gray text */
+  transition: left 0.5s ease-in;
+  padding: 20px;
+  box-shadow: 2px 0px 15px rgba(0, 0, 0, 0.3); /* Softer shadow */
+  overflow: hidden; /* Prevent overflow */
+  /* border: 2px solid red; */
+  border-radius: 0px 20px 20px 0px;
+}
+
+/* Open state */
+.sidebar.open {
+  left: 0; /* Show the sidebar */
+  z-index: 1;
+}
+
+/* Closed state */
+.sidebar.close {
+  left: -300px; /* Hide the sidebar */
+}
+
+Fimenu{
+  z-index: 1;
+}
+/* Toggle button styles */
+.sidebar-toggle {
+  position: absolute;
+  /* top: 20px; */
+  left: 20px;
+  padding: 10px 15px;
+  border: none;
+  background-color: transparent; /* Primary button color */
+  background-color: transparent; /* Primary button color */
+  color: #fff; /* Text color */
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 20px;
+  transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+/* Button hover effect */
+.sidebar-toggle:hover {
+  /* background-color: #3498db; Lighter blue on hover */
+  transform: scale(1.2);
+}
+
+/* Sidebar heading styles */
+.sidebar h2 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Navigation links styles */
+.sidebar ul {
+  list-style-type: none; /* Remove bullet points */
+  padding: 0; /* Remove padding */
+  margin-top: 120px;
+}
+
+.sidebar ul li {
+  margin: 15px 0; /* Spacing between links */
+  cursor: pointer;
+}
+
+.sidebar ul li h2 {
+  color: #ecf0f1; /* Link color */
+  text-decoration: none; /* Remove underline */
+  font-size: 18px;
+  display: block; /* Make the whole area clickable */
+  transition: background-color 0.3s; /* Transition for hover effect */
+  padding: 10px; /* Padding for easier click */
+  border-radius: 5px; /* Rounded corners */
+}
+
+/* Link hover effect */
+.sidebar ul li h2:hover {
+  background-color:rgb(109, 103, 103); /* Background color on hover */
+}
+
+/* Add media query for better responsiveness */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 240px; /* Smaller width on mobile */
+  }
+
+  .sidebar-toggle {
+    left: 10px; /* Smaller margin */
+  }
+}
+

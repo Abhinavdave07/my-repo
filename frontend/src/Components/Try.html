@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+ .status-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+}
+
+.status-table th, .status-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.status-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.status-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.status-table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.status {
+  display: inline-block;
+  padding: 5px 10px;
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.status.progress {
+  background-color: #28a745; /* Green for Progress */
+}
+
+.status.open {
+  background-color: #ffc107; /* Yellow for Open */
+  color: black;
+}
+
+.status.on-hold {
+  background-color: #dc3545; /* Red for On Hold */
+}
+
+
+  </style>
+</head>
+<body>
+
+
+  <table class="status-table">
+    <thead>
+      <tr>
+        <th>INVOICE</th>
+        <th>CUSTOMER</th>
+        <th>SHIP</th>
+        <th>PRICE</th>
+        <th>PURCHASED PRICE</th>
+        <th>STATUS</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1001</td>
+        <td>Mark Otto</td>
+        <td>Japan</td>
+        <td>$3000</td>
+        <td>$1200</td>
+        <td><span class="status progress">Progress</span></td>
+      </tr>
+      <tr>
+        <td>1001</td>
+        <td>Mark Otto</td>
+        <td>Japan</td>
+        <td>$3000</td>
+        <td>$1200</td>
+        <td><span class="status open">Open</span></td>
+      </tr>
+      <tr>
+        <td>1001</td>
+        <td>Mark Otto</td>
+        <td>Japan</td>
+        <td>$3000</td>
+        <td>$1200</td>
+        <td><span class="status on-hold">On hold</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  
+</body>
+</html>
